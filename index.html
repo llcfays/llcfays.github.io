@@ -269,6 +269,150 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://llcfays.github.io/2019/03/29/Activity 中的finish()、onDestory()和System.exit(0) 三者的区别/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="llcfays">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/llcfays.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="llcfays">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/29/Activity 中的finish()、onDestory()和System.exit(0) 三者的区别/" itemprop="url">Activity 中的finish()、onDestory()和System.exit(0) 三者的区别</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-29T15:40:38+08:00">
+                2019-03-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Interview/" itemprop="url" rel="index">
+                    <span itemprop="name">Interview</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Activity-finish"><a href="#Activity-finish" class="headerlink" title="Activity.finish()"></a>Activity.finish()</h2><pre><code>主动将在栈顶的 Activity 移出栈。但是并不会第一时间调用 onDestory() 方法，占用的资源也不会第一时间被释放。
+</code></pre><h2 id="Activity-onDestory"><a href="#Activity-onDestory" class="headerlink" title="Activity.onDestory()"></a>Activity.onDestory()</h2><pre><code>Activity 生命周期中的最后一步，系统销毁了 Activity 实例在内存中占据的空间。
+</code></pre><h2 id="System-exit-0"><a href="#System-exit-0" class="headerlink" title="System.exit(0)"></a>System.exit(0)</h2><pre><code>退出整个应用程序，杀掉进程。
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://llcfays.github.io/2019/03/28/Activity/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -500,7 +644,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
