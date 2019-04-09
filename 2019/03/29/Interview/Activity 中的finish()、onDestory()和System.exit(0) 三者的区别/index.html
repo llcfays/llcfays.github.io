@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content=",,,,,,,">
+  <meta name="keywords" content="Android,">
 
 
 
@@ -79,15 +79,18 @@
 
 
 
+<meta name="description" content="Activity.finish()主动将在栈顶的 Activity 移出栈。但是并不会第一时间调用 onDestory() 方法，占用的资源也不会第一时间被释放。 Activity.onDestory()Activity 生命周期中的最后一步，系统销毁了 Activity 实例在内存中占据的空间。 System.exit(0)退出整个应用程序，杀掉进程。">
 <meta name="keywords" content="Android">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Activity">
-<meta property="og:url" content="https://llcfays.github.io/Interview/Activity.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Activity 中的finish()、onDestory()和System.exit(0) 三者的区别">
+<meta property="og:url" content="https://llcfays.github.io/2019/03/29/Interview/Activity 中的finish()、onDestory()和System.exit(0) 三者的区别/index.html">
 <meta property="og:site_name" content="llcfays">
+<meta property="og:description" content="Activity.finish()主动将在栈顶的 Activity 移出栈。但是并不会第一时间调用 onDestory() 方法，占用的资源也不会第一时间被释放。 Activity.onDestory()Activity 生命周期中的最后一步，系统销毁了 Activity 实例在内存中占据的空间。 System.exit(0)退出整个应用程序，杀掉进程。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-28T05:36:55.325Z">
+<meta property="og:updated_time" content="2019-04-09T09:29:55.819Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Activity">
+<meta name="twitter:title" content="Activity 中的finish()、onDestory()和System.exit(0) 三者的区别">
+<meta name="twitter:description" content="Activity.finish()主动将在栈顶的 Activity 移出栈。但是并不会第一时间调用 onDestory() 方法，占用的资源也不会第一时间被释放。 Activity.onDestory()Activity 生命周期中的最后一步，系统销毁了 Activity 实例在内存中占据的空间。 System.exit(0)退出整个应用程序，杀掉进程。">
 
 
 
@@ -117,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://llcfays.github.io/Interview/Activity.html">
+  <link rel="canonical" href="https://llcfays.github.io/2019/03/29/Interview/Activity 中的finish()、onDestory()和System.exit(0) 三者的区别/">
 
 
 
 
 
-  <title>Activity | llcfays</title>
+  <title>Activity 中的finish()、onDestory()和System.exit(0) 三者的区别 | llcfays</title>
   
 
 
@@ -198,12 +201,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+        <li class="menu-item menu-item-图谱">
+          <a href="/skillmap" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
             
-            关于
+            图谱
           </a>
         </li>
       
@@ -237,6 +240,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -263,7 +276,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">Activity</h1>
+	<h1 class="post-title" itemprop="name headline">Activity 中的finish()、onDestory()和System.exit(0) 三者的区别</h1>
 
 
 
@@ -275,7 +288,10 @@
       <div class="post-body">
         
         
-          
+          <h2 id="Activity-finish"><a href="#Activity-finish" class="headerlink" title="Activity.finish()"></a>Activity.finish()</h2><pre><code>主动将在栈顶的 Activity 移出栈。但是并不会第一时间调用 onDestory() 方法，占用的资源也不会第一时间被释放。
+</code></pre><h2 id="Activity-onDestory"><a href="#Activity-onDestory" class="headerlink" title="Activity.onDestory()"></a>Activity.onDestory()</h2><pre><code>Activity 生命周期中的最后一步，系统销毁了 Activity 实例在内存中占据的空间。
+</code></pre><h2 id="System-exit-0"><a href="#System-exit-0" class="headerlink" title="System.exit(0)"></a>System.exit(0)</h2><pre><code>退出整个应用程序，杀掉进程。
+</code></pre>
         
       </div>
       
@@ -322,8 +338,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -340,7 +365,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -351,7 +376,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -362,7 +387,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -401,6 +426,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Activity-finish"><span class="nav-number">1.</span> <span class="nav-text">Activity.finish()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Activity-onDestory"><span class="nav-number">2.</span> <span class="nav-text">Activity.onDestory()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System-exit-0"><span class="nav-number">3.</span> <span class="nav-text">System.exit(0)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
