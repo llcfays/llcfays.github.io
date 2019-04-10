@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Object 类是 Java 中所有类的基类，在 Java.lang（Java 8 version 52.0） 包下面，一共12个方法： Object()Class&amp;lt;?&amp;gt; getClass()int hashCode()boolean equals(Object obj)Object clone()String toString()void notify()void notifyAll">
+<meta name="description" content="介绍Object 类是 Java 中所有类的基类，在 Java.lang（Java 8 version 52.0） 包下面，一共12个方法： Object()构造方法 在 Java 中类定义的时候，对于未定义构造函数的类，默认会有一个无参数的构造函数，作为所有类的基类，Object 类自然要反映出此特性。 Class&amp;lt;?&amp;gt; getClass()getClass() 是一个 Native">
 <meta name="keywords" content="Java基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java Object类方法">
 <meta property="og:url" content="https://llcfays.github.io/2019/04/09/Java/Java基础/JavaObject类方法/index.html">
 <meta property="og:site_name" content="llcfays">
-<meta property="og:description" content="Object 类是 Java 中所有类的基类，在 Java.lang（Java 8 version 52.0） 包下面，一共12个方法： Object()Class&amp;lt;?&amp;gt; getClass()int hashCode()boolean equals(Object obj)Object clone()String toString()void notify()void notifyAll">
+<meta property="og:description" content="介绍Object 类是 Java 中所有类的基类，在 Java.lang（Java 8 version 52.0） 包下面，一共12个方法： Object()构造方法 在 Java 中类定义的时候，对于未定义构造函数的类，默认会有一个无参数的构造函数，作为所有类的基类，Object 类自然要反映出此特性。 Class&amp;lt;?&amp;gt; getClass()getClass() 是一个 Native">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-09T09:46:57.911Z">
+<meta property="og:updated_time" content="2019-04-10T07:17:08.237Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Object类方法">
-<meta name="twitter:description" content="Object 类是 Java 中所有类的基类，在 Java.lang（Java 8 version 52.0） 包下面，一共12个方法： Object()Class&amp;lt;?&amp;gt; getClass()int hashCode()boolean equals(Object obj)Object clone()String toString()void notify()void notifyAll">
+<meta name="twitter:description" content="介绍Object 类是 Java 中所有类的基类，在 Java.lang（Java 8 version 52.0） 包下面，一共12个方法： Object()构造方法 在 Java 中类定义的时候，对于未定义构造函数的类，默认会有一个无参数的构造函数，作为所有类的基类，Object 类自然要反映出此特性。 Class&amp;lt;?&amp;gt; getClass()getClass() 是一个 Native">
 
 
 
@@ -288,8 +288,66 @@
       <div class="post-body">
         
         
-          <p>Object 类是 Java 中所有类的基类，在 Java.lang（Java 8 version 52.0） 包下面，一共12个方法：</p>
-<h3 id="Object"><a href="#Object" class="headerlink" title="Object()"></a>Object()</h3><h3 id="Class-lt-gt-getClass"><a href="#Class-lt-gt-getClass" class="headerlink" title="Class&lt;?&gt; getClass()"></a>Class&lt;?&gt; getClass()</h3><h3 id="int-hashCode"><a href="#int-hashCode" class="headerlink" title="int hashCode()"></a>int hashCode()</h3><h3 id="boolean-equals-Object-obj"><a href="#boolean-equals-Object-obj" class="headerlink" title="boolean equals(Object obj)"></a>boolean equals(Object obj)</h3><h3 id="Object-clone"><a href="#Object-clone" class="headerlink" title="Object clone()"></a>Object clone()</h3><h3 id="String-toString"><a href="#String-toString" class="headerlink" title="String toString()"></a>String toString()</h3><h3 id="void-notify"><a href="#void-notify" class="headerlink" title="void notify()"></a>void notify()</h3><h3 id="void-notifyAll"><a href="#void-notifyAll" class="headerlink" title="void notifyAll()"></a>void notifyAll()</h3><h3 id="void-wait-long-millis"><a href="#void-wait-long-millis" class="headerlink" title="void wait(long millis)"></a>void wait(long millis)</h3><h3 id="void-wait-long-var1-int-var3"><a href="#void-wait-long-var1-int-var3" class="headerlink" title="void wait(long var1, int var3)"></a>void wait(long var1, int var3)</h3><h3 id="void-wait"><a href="#void-wait" class="headerlink" title="void wait()"></a>void wait()</h3><h3 id="void-finalize"><a href="#void-finalize" class="headerlink" title="void finalize()"></a>void finalize()</h3>
+          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Object 类是 Java 中所有类的基类，在 Java.lang（Java 8 version 52.0） 包下面，一共12个方法：</p>
+<h3 id="Object"><a href="#Object" class="headerlink" title="Object()"></a>Object()</h3><p>构造方法</p>
+<p>在 Java 中类定义的时候，对于未定义构造函数的类，默认会有一个无参数的构造函数，作为所有类的基类，Object 类自然要反映出此特性。</p>
+<h3 id="Class-lt-gt-getClass"><a href="#Class-lt-gt-getClass" class="headerlink" title="Class&lt;?&gt; getClass()"></a>Class&lt;?&gt; getClass()</h3><p>getClass() 是一个 Native 方法，返回的是此 Object 对象的类对象/运行时类对象 Class&lt;?&gt;，Object.class 具有相同效果。</p>
+<p>“类对象”：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在 Java 里面“类”是对某一类事物的描述，是抽象的、概念上的定义。</span><br><span class="line"></span><br><span class="line">在 Java 里面“对象”则是此类所描述的事物的具体实例。</span><br></pre></td></tr></table></figure>
+<p>作为概念层次的类，其本身也具有某些共同的特性，如都具有类名称、由类加载器去加载，都具有包，具有父类，属性和方法等。<br>于是，Java 中有专门定义了一个类，Class，去描述其他类所具有的这些特性，因此，从此角度去看，类本身也都是属于Class 类的对象，为与经常意义上的对象相区分，在此称之为”类对象”。</p>
+<h3 id="int-hashCode"><a href="#int-hashCode" class="headerlink" title="int hashCode()"></a>int hashCode()</h3><p>hashCode() 方法返回一个整形数值，表示该对象的哈希码值。</p>
+<p>hashCode() 具有如下约定：</p>
+<ul>
+<li>在Java应用程序程序执行期间，对于同一对象多次调用hashCode()方法时，其返回的哈希码是相同的，前提是将对象进行equals比较时所用的标尺信息未做修改。在Java应用程序的一次执行到另外一次执行，同一对象的hashCode()返回的哈希码无须保持一致；</li>
+<li>如果两个对象相等（依据：调用equals()方法），那么这两个对象调用 hashCode() 返回的哈希码也必须相等；</li>
+<li>如果两个对象调用 hasCode() 返回的哈希码相等，这两个对象不一定相等。</li>
+</ul>
+<h3 id="boolean-equals-Object-obj"><a href="#boolean-equals-Object-obj" class="headerlink" title="boolean equals(Object obj)"></a>boolean equals(Object obj)</h3><p>“==”与”equals”的区别:</p>
+<ul>
+<li>“==”比较原生类型,如boolean、int、float，就是比较他们的值是否相等。</li>
+<li>“==”对比两个对象基于内存引用，如果两个对象的引用完全相同（指向同一个对象）时，“==”操作将返回true，否则返回false。</li>
+<li>equals() 根据具体的业务逻辑来定义该方法，用于检查两个对象的相等性。拿 String 来说就是字符串是否相等。如果在自定义的对象里面，你就需要重写 equals() 方法用于比较哪两个对象相等。</li>
+</ul>
+<p>我们列举 “==”与”equals”的区别 来解释 equals() ，需要注意的是，重写equals()方法必须重写hasCode()方法。</p>
+<h3 id="Object-clone"><a href="#Object-clone" class="headerlink" title="Object clone()"></a>Object clone()</h3><p>clone 方法也是一个 Native 方法，是由 C/C++ 完成的。这个方法的目的是创建并返回此对象一个副本。用官方的话就是：clone 函数返回的是一个引用，指向的是新的 clone 出来的对象，此对象与原对象分别占用不同的堆空间。</p>
+<ul>
+<li>clone() 在使用的时候需要实现 Cloneable 接口，如果没有实现 Cloneable 接口，并且子类直接调用Object 类的 clone() 方法，则会抛出 CloneNotSupportedException 异常。</li>
+<li>Cloneable 接口仅是一个表示接口，接口本身不包含任何方法，用来指示 Object.clone() 可以合法的被子类引用所调用。</li>
+</ul>
+<h3 id="String-toString"><a href="#String-toString" class="headerlink" title="String toString()"></a>String toString()</h3><p>toString()方法返回该对象的字符串</p>
+<p>toString() 是由对象的类型和其哈希码唯一确定，同一类型但不相等的两个对象分别调用toString()方法返回的结果可能相同。</p>
+<h3 id="void-notify"><a href="#void-notify" class="headerlink" title="void notify()"></a>void notify()</h3><p>notify() 方法是一个 Native 方法。</p>
+<p>是用于唤醒一个在此对象监视器上等待的线程的，如果有多个线程在此对象上等待，那么只会随机唤醒其中一个，并且在对实现做出决定是发生。</p>
+<p>notify方法只能被作为此对象监视器的所有者的线程来调用。一个线程要想成为对象监视器的所有者，可以使用以下3种方法：</p>
+<pre><code>- 执行对象的同步实例方法
+- 使用synchronized内置锁
+- 对于Class类型的对象，执行同步静态方法
+</code></pre><p>一次只能有一个线程拥有对象的监视器。</p>
+<p>notify 只能在拥有对象监视器的所有者线程中调用，否则会抛出 IllegalMonitorStateException 异常。</p>
+<h3 id="void-notifyAll"><a href="#void-notifyAll" class="headerlink" title="void notifyAll()"></a>void notifyAll()</h3><p>跟 notify 一样，唯一的区别就是会唤醒在此对象监视器上等待的所有线程，而不是一个线程。</p>
+<p>同样，如果当前线程不是对象监视器的所有者，那么调用 notifyAll 同样会发生 IllegalMonitorStateException 异常。</p>
+<h3 id="void-wait-long-millis"><a href="#void-wait-long-millis" class="headerlink" title="void wait(long millis)"></a>void wait(long millis)</h3><p>wait(long millis) 也是 Native 方法。</p>
+<p>它会让当前线程等待直到另外一个线程调用对象的notify或notifyAll方法，或者超过参数设置的timeout超时时间。</p>
+<p>跟 notify 和 notifyAll 方法一样，当前线程必须是此对象的监视器所有者，否则还是会发生 IllegalMonitorStateException 异常。</p>
+<p>wait 方法会让当前线程将其自身放置在对象的等待集中，并且放弃该对象上的所有同步要求。出于线程调度目的，当前线程是不可用并处于休眠状态，直到发生以下四件事中的任意一件:</p>
+<ul>
+<li>其他某个线程调用此对象的notify方法，并且当前线程碰巧被任选为被唤醒的线程;</li>
+<li>其他某个线程调用此对象的notifyAll方法;</li>
+<li>其他某个线程调用Thread.interrupt方法中断了当前线程;</li>
+<li>时间到了参数设置的超时时间。如果timeout参数为0，则不会超时，会一直进行等待。</li>
+</ul>
+<h3 id="void-wait-long-var1-int-nanos"><a href="#void-wait-long-var1-int-nanos" class="headerlink" title="void wait(long var1, int nanos)"></a>void wait(long var1, int nanos)</h3><p>和 wait(long millis) 一样，多了一个 nanos 参数，表示额外时间，也就是额外超时多少毫微秒。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">超时时间+=额外时间;</span><br></pre></td></tr></table></figure>
+<h3 id="void-wait"><a href="#void-wait" class="headerlink" title="void wait()"></a>void wait()</h3><p>和前两个 wait() 相同，只不过没有超时时间。</p>
+<h3 id="void-finalize"><a href="#void-finalize" class="headerlink" title="void finalize()"></a>void finalize()</h3><p>finalize() 作用于垃圾回收，该方法是实例被垃圾回收器回收的时候触发的操作。</p>
+<h2 id="额外"><a href="#额外" class="headerlink" title="额外"></a>额外</h2><ul>
+<li>hashCode 与 equals<ul>
+<li>两个对象相等 &lt;=&gt;  equals()相等  =&gt; hashCode()相等</li>
+<li>hasCode()不相等 =&gt; equals（）不相等 &lt;=&gt; 两个对象不相等。</li>
+</ul>
+</li>
+</ul>
+
         
       </div>
       
@@ -434,7 +492,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Object"><span class="nav-number">1.</span> <span class="nav-text">Object()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Class-lt-gt-getClass"><span class="nav-number">2.</span> <span class="nav-text">Class&lt;?&gt; getClass()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#int-hashCode"><span class="nav-number">3.</span> <span class="nav-text">int hashCode()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#boolean-equals-Object-obj"><span class="nav-number">4.</span> <span class="nav-text">boolean equals(Object obj)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-clone"><span class="nav-number">5.</span> <span class="nav-text">Object clone()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-toString"><span class="nav-number">6.</span> <span class="nav-text">String toString()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#void-notify"><span class="nav-number">7.</span> <span class="nav-text">void notify()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#void-notifyAll"><span class="nav-number">8.</span> <span class="nav-text">void notifyAll()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#void-wait-long-millis"><span class="nav-number">9.</span> <span class="nav-text">void wait(long millis)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#void-wait-long-var1-int-var3"><span class="nav-number">10.</span> <span class="nav-text">void wait(long var1, int var3)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#void-wait"><span class="nav-number">11.</span> <span class="nav-text">void wait()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#void-finalize"><span class="nav-number">12.</span> <span class="nav-text">void finalize()</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Object"><span class="nav-number">1.1.</span> <span class="nav-text">Object()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Class-lt-gt-getClass"><span class="nav-number">1.2.</span> <span class="nav-text">Class&lt;?&gt; getClass()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#int-hashCode"><span class="nav-number">1.3.</span> <span class="nav-text">int hashCode()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#boolean-equals-Object-obj"><span class="nav-number">1.4.</span> <span class="nav-text">boolean equals(Object obj)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-clone"><span class="nav-number">1.5.</span> <span class="nav-text">Object clone()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-toString"><span class="nav-number">1.6.</span> <span class="nav-text">String toString()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#void-notify"><span class="nav-number">1.7.</span> <span class="nav-text">void notify()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#void-notifyAll"><span class="nav-number">1.8.</span> <span class="nav-text">void notifyAll()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#void-wait-long-millis"><span class="nav-number">1.9.</span> <span class="nav-text">void wait(long millis)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#void-wait-long-var1-int-nanos"><span class="nav-number">1.10.</span> <span class="nav-text">void wait(long var1, int nanos)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#void-wait"><span class="nav-number">1.11.</span> <span class="nav-text">void wait()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#void-finalize"><span class="nav-number">1.12.</span> <span class="nav-text">void finalize()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#额外"><span class="nav-number">2.</span> <span class="nav-text">额外</span></a></li></ol></div>
             
 
           </div>
