@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Android,">
 
 
 
@@ -79,13 +79,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="llcfays">
-<meta property="og:url" content="https://llcfays.github.io/archives/2019/03/index.html">
+<meta name="description" content="介绍Application 是 Android 中代表应用程序的类，是和 Activity、service一样，输入 Android 中的一个系统组件。当 Android 程序启动时，系统会自动创建一个 Application 对象，且只会创建一个。 生命周期Application 对象的生命周期是整个程序中最长的，也就是整个 Android App 的生命周期  onCreate()   应用程">
+<meta name="keywords" content="Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Application 的生命周期">
+<meta property="og:url" content="https://llcfays.github.io/2019/04/17/Android/Android基础/AndroidApplication的生命周期/index.html">
 <meta property="og:site_name" content="llcfays">
+<meta property="og:description" content="介绍Application 是 Android 中代表应用程序的类，是和 Activity、service一样，输入 Android 中的一个系统组件。当 Android 程序启动时，系统会自动创建一个 Application 对象，且只会创建一个。 生命周期Application 对象的生命周期是整个程序中最长的，也就是整个 Android App 的生命周期  onCreate()   应用程">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://llcfays.github.io/images/application/MemoryLevel.png">
+<meta property="og:updated_time" content="2019-04-17T06:50:46.917Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="llcfays">
+<meta name="twitter:title" content="Android Application 的生命周期">
+<meta name="twitter:description" content="介绍Application 是 Android 中代表应用程序的类，是和 Activity、service一样，输入 Android 中的一个系统组件。当 Android 程序启动时，系统会自动创建一个 Application 对象，且只会创建一个。 生命周期Application 对象的生命周期是整个程序中最长的，也就是整个 Android App 的生命周期  onCreate()   应用程">
+<meta name="twitter:image" content="https://llcfays.github.io/images/application/MemoryLevel.png">
 
 
 
@@ -115,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://llcfays.github.io/archives/2019/03/">
+  <link rel="canonical" href="https://llcfays.github.io/2019/04/17/Android/Android基础/AndroidApplication的生命周期/">
 
 
 
 
 
-  <title>归档 | llcfays</title>
+  <title>Android Application 的生命周期 | llcfays</title>
   
 
 
@@ -150,7 +157,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -264,107 +271,65 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
 
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 5 篇日志。 继续努力。
-      </span>
+	<h1 class="post-title" itemprop="name headline">Android Application 的生命周期</h1>
+
+
+
+</header>
 
       
+      
+      
+      <div class="post-body">
+        
+        
+          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Application 是 Android 中代表应用程序的类，是和 Activity、service一样，输入 Android 中的一个系统组件。<br>当 Android 程序启动时，系统会自动创建一个 Application 对象，且只会创建一个。</p>
+<h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>Application 对象的生命周期是整个程序中最长的，也就是整个 Android App 的生命周期</p>
+<ul>
+<li><p>onCreate()</p>
+<p>  应用程序被创建的时候执行<br>  一般我们会重写这个方法，然后在方法里初始化配置、资源和第三方服务等。</p>
+</li>
+<li><p>onLowMemory()</p>
+<p>  在低内存的时候被调用<br>  根据当前内存使用情况进行自身的内存资源的不同程度释放，以避免被系统直接杀掉以及优化应用程序的性能体验。</p>
+</li>
+<li><p>onTrimMemory(int level)</p>
+<p>  和 onLowMemory() 类似，告知内存使用情况，返回参数为内存级别。</p>
+<p>  <img src="/images/application/MemoryLevel.png" alt="MemoryLevel"></p>
+</li>
+<li><p>onConfigurationChanged(Configuration newConfig)</p>
+<p>  应用程序配置信息被改变。<br>  配置信息是指 Manifest.xml 文件下的 Activity 标签属性 android:configChanges 的值。</p>
+</li>
+<li><p>onTerminate()</p>
+<p>  应用程序结束时调用。</p>
+</li>
+</ul>
+<h2 id="onLowMemory-和-onTrimMemory-int-level"><a href="#onLowMemory-和-onTrimMemory-int-level" class="headerlink" title="onLowMemory() 和 onTrimMemory(int level)"></a>onLowMemory() 和 onTrimMemory(int level)</h2><ul>
+<li>onTrimMemory 是 onLowMemory 在 Android 4.0 之后的替代 API。</li>
+<li>onLowMemory 对应 onTrimMemory 中的 TRIM_MEMORY_COMPLETE 级别。</li>
+<li>如果想要兼容 Android 4.0 以下，使用 onLowMemory；否则的话直接使用 onTrimMemory 就好了。</li>
+</ul>
+<h2 id="onTrimMemory-的-TRIM-MEMORY-UI-HIDDEN-级别"><a href="#onTrimMemory-的-TRIM-MEMORY-UI-HIDDEN-级别" class="headerlink" title="onTrimMemory 的 TRIM_MEMORY_UI_HIDDEN 级别"></a>onTrimMemory 的 TRIM_MEMORY_UI_HIDDEN 级别</h2><ul>
+<li>TRIM_MEMORY_UI_HIDDEN 是指 回收UI资源” 。</li>
+<li>在 activity onStop() 方法 “回收 Activity” 之前调用。</li>
+</ul>
 
         
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/29/Interview/Activity 中的finish()、onDestory()和System.exit(0) 三者的区别/" itemprop="url">
-              
-                <span itemprop="name">Activity 中的finish()、onDestory()和System.exit(0) 三者的区别</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-29T15:40:38+08:00" content="2019-03-29">
-          03-29
-        </time>
       </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/28/Interview/Activity/" itemprop="url">
-              
-                <span itemprop="name">Activity</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-28T13:32:15+08:00" content="2019-03-28">
-          03-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
+      
     </div>
+    
+    
+    
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
@@ -372,6 +337,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzQzNi8xOTk3Nw"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -392,8 +366,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -471,6 +454,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生命周期"><span class="nav-number">2.</span> <span class="nav-text">生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#onLowMemory-和-onTrimMemory-int-level"><span class="nav-number">3.</span> <span class="nav-text">onLowMemory() 和 onTrimMemory(int level)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#onTrimMemory-的-TRIM-MEMORY-UI-HIDDEN-级别"><span class="nav-number">4.</span> <span class="nav-text">onTrimMemory 的 TRIM_MEMORY_UI_HIDDEN 级别</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -611,6 +610,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -639,6 +642,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
