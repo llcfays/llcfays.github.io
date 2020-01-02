@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://llcfays.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-01-02T03:53:12.783Z</updated>
+    <title>llcfays</title>
+    <updated>2020-01-02T03:59:37.200Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://llcfays.github.io"/>
     <link rel="self" href="https://llcfays.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://llcfays.github.io/images/avatar.png</logo>
     <icon>https://llcfays.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, llcfays</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://llcfays.github.io/post/hello-gridea</id>
