@@ -2,18 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://llcfays.github.io</id>
     <title>llcfays</title>
-    <updated>2020-01-02T03:59:37.200Z</updated>
+    <updated>2021-12-10T04:00:01.556Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://llcfays.github.io"/>
     <link rel="self" href="https://llcfays.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://llcfays.github.io/images/avatar.png</logo>
     <icon>https://llcfays.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, llcfays</rights>
+    <rights>All rights reserved 2021, llcfays</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://llcfays.github.io/post/hello-gridea</id>
-        <link href="https://llcfays.github.io/post/hello-gridea">
+        <id>https://llcfays.github.io/post/hello-gridea/</id>
+        <link href="https://llcfays.github.io/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
